@@ -1,8 +1,8 @@
 /*
 # elaina - UserBot
 # Credit Sc Ori By ZeeoneOfc
-# Subscribe Yt RflBotz Ofc
-# This file is a part of < https://github.com/zeeoneofc/elaina/ >
+# Subscribe Yt rflbotzz
+# This file is a part of < https://github.com/RflBotzz/elaina/ >
 */ 
 
 // WhatsApp api
@@ -638,26 +638,44 @@ case 'faktaunik':
 faktaunik = await fetchJson(`https://api.lolhuman.xyz/api/random/faktaunik?apikey=${lolkey}`)
 reply(`*Taukah kamu ternyata*\n${faktaunik.result}`) 
 break
-case 'wikipedia':
-if (args.length == 0) return reply(`Nama Yg Mau Di Cari Mana Kak\nContoh: ${prefix + command} Tahu`)
-query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wiki?apikey=${lolkey}`)
-get_result = get_result.result
-reply(get_result)
+case 'wikipedia':
+
+if (args.length == 0) return reply(`Nama Yg Mau Di Cari Mana Kak\nContoh: ${prefix + command} Tahu`)
+
+query = args.join(" ")
+
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/wiki?apikey=${lolkey}`)
+
+get_result = get_result.result
+
+reply(get_result)
+
 break
-case 'translate':
-if (args.length == 0) return reply(`Teks Yg Mau Di Translate Mana Kak\nContoh: ${prefix + command} en Good Morning`)
-kode_negara = args[0]
-args.shift()
-ini_txt = args.join(" ")
+case 'translate':
+
+if (args.length == 0) return reply(`Teks Yg Mau Di Translate Mana Kak\nContoh: ${prefix + command} en Good Morning`)
+
+kode_negara = args[0]
+
+args.shift()
+
+ini_txt = args.join(" ")
+
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/translate/auto/id?apikey=${lolkey}`)
-get_result = get_result.result
-init_txt = `From : ${get_result.from}\n`
-init_txt += `To : ${get_result.to}\n`
-init_txt += `Original : ${get_result.original}\n`
-init_txt += `Translated : ${get_result.translated}\n`
-init_txt += `Pronunciation : ${get_result.pronunciation}\n`
-reply(init_txt)
+get_result = get_result.result
+
+init_txt = `From : ${get_result.from}\n`
+
+init_txt += `To : ${get_result.to}\n`
+
+init_txt += `Original : ${get_result.original}\n`
+
+init_txt += `Translated : ${get_result.translated}\n`
+
+init_txt += `Pronunciation : ${get_result.pronunciation}\n`
+
+reply(init_txt)
+
 break
 case 'katabijak':
 anu = await fetchJson(`https://api.lolhuman.xyz/api/random/katabijak?apikey=${lolkey}`)
@@ -901,7 +919,7 @@ sound = fs.readFileSync('Sound/sound4.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound5':
-sound = fs.readFileSync('Sound/sound5.mp3')
+sound = fs.readFileSync('Sound/sound5.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound6':
@@ -909,27 +927,27 @@ sound = fs.readFileSync('Sound/sound6.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound7(':
-sound = fs.readFileSync('Sound/sound7.mp3')
+sound = fs.readFileSync('Sound/sound7.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound8':
-sound = fs.readFileSync('Sound/sound8.mp3')
+sound = fs.readFileSync('Sound/sound8.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound9':
-sound = fs.readFileSync('Sound/sound9.mp3')
+sound = fs.readFileSync('Sound/sound9.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound10':
-sound = fs.readFileSync('Sound/sound10.mp3')
+sound = fs.readFileSync('Sound/sound10.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound11':
-sound = fs.readFileSync('Sound/sound11.mp3')
+sound = fs.readFileSync('Sound/sound11.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound12':
-sound = fs.readFileSync('Sound/sound12.mp3')
+sound = fs.readFileSync('Sound/sound12.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound13':
@@ -937,7 +955,7 @@ sound = fs.readFileSync('Sound/sound13.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound14':
-sound = fs.readFileSync('Sound/sound14.mp3')
+sound = fs.readFileSync('Sound/sound14.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound15':
@@ -953,7 +971,7 @@ sound = fs.readFileSync('Sound/sound17.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound18':
-sound = fs.readFileSync('Sound/sound18.mp3')
+sound = fs.readFileSync('Sound/sound18.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound19':
@@ -1045,7 +1063,7 @@ sound = fs.readFileSync('Sound/sound40.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound41':
-sound = fs.readFileSync('Sound/sound41.mp3')
+sound = fs.readFileSync('Sound/sound41.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound42':
@@ -1133,7 +1151,7 @@ sound = fs.readFileSync('Sound/sound62.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound63':
-sound = fs.readFileSync('Sound/sound63.mp3')
+sound = fs.readFileSync('Sound/sound63.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound64':
@@ -1141,7 +1159,7 @@ sound = fs.readFileSync('Sound/sound64.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound65':
-sound = fs.readFileSync('Sound/sound65.mp3')
+sound = fs.readFileSync('Sound/sound65.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound66':
@@ -1149,7 +1167,7 @@ sound = fs.readFileSync('Sound/sound66.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound67':
-sound = fs.readFileSync('Sound/sound67.mp3')
+sound = fs.readFileSync('Sound/sound67.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound68':
@@ -1161,7 +1179,7 @@ sound = fs.readFileSync('Sound/sound69.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound70':
-sound = fs.readFileSync('Sound/sound70.mp3')
+sound = fs.readFileSync('Sound/sound70.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound71':
@@ -1193,7 +1211,7 @@ sound = fs.readFileSync('Sound/sound77.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound78':
-sound = fs.readFileSync('Sound/sound78.mp3')
+sound = fs.readFileSync('Sound/sound78.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound79':
@@ -1237,7 +1255,7 @@ sound = fs.readFileSync('Sound/sound88.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound89':
-sound = fs.readFileSync('Sound/sound89.mp3')
+sound = fs.readFileSync('Sound/sound89.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound90':
@@ -1333,7 +1351,7 @@ sound = fs.readFileSync('Sound/sound112.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound113':
-sound = fs.readFileSync('Sound/sound113.mp3')
+sound = fs.readFileSync('Sound/sound113.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound114':
@@ -1345,7 +1363,7 @@ sound = fs.readFileSync('Sound/sound115.mp3')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound116':
-sound = fs.readFileSync('Sound/sound116.mp3')
+sound = fs.readFileSync('Sound/sound116.m4a')
 elaina.sendMessage(from, sound, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt: false})
 break
 case 'sound117':
@@ -1529,6 +1547,24 @@ ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
 await elaina.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
+
+
+case 'nekopoi':
+if (args.length == 0) return reply(`Nama Anime Nya Mana Kak\n Contoh: ${prefix + command} Naruto`)
+query = args.join(" ")
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${lolkey}&query=${query}`)
+get_result = get_result.result
+ini_txt += `Title : ${get_result.title}\n`
+}
+ini_txt += `\nDescription : ${get_result.link}`
+thumbnail = await getBuffer(get_result.thumbnail)
+await elaina.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
+break
+
+
+
+
+
 case 'charactersearch':
 if (args.length == 0) return reply(`Nama Anime Nya Mana Kak\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
